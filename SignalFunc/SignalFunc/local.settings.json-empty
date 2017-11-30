@@ -1,0 +1,18 @@
+{
+    "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "AzureWebJobsDashboard": "",
+
+    "FaceAPIKey": "",
+    "FaceAPIEndpoint": "",
+    "PredictionKey": "",
+    "PredictionEndpoint": "",
+
+    "CosmosDbConnection": "",
+
+    "SaveApiEndpoint": "",
+    
+    "UseTagRecognition": "false"
+  }
+}

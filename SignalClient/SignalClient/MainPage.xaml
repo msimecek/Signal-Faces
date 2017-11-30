@@ -1,0 +1,50 @@
+﻿<Page
+    x:Class="SignalClient.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SignalClient"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Padding="22">
+        <ScrollViewer>
+            <StackPanel>
+                <Image Name="imgCapture" Width="640" Height="480" />
+                <TextBlock x:Name="txtStatus" HorizontalAlignment="Center" />
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Content="Start" Click="Start_Click" Margin="5,0" />
+                    <Button Content="Stop" Click="Stop_Click" Margin="5,0" />
+                    <Button Content="Force Upload" Click="ForceUpload_Click" />
+                </StackPanel>
+                
+                <TextBlock Text="Camera IP:" />
+                <TextBox x:Name="txtIpAddress" Text="{Binding IpAddress, Mode=TwoWay}" />
+
+                <TextBlock Text="Camera URL template:" />
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="txtCameraTemplate" Text="{Binding CameraTemplate, Mode=TwoWay}" />
+                    <Button Content="Reset" Click="ResetTemplate_Click" />
+                </StackPanel>
+
+                <TextBlock Text="Camera admin:" />
+                <TextBox x:Name="txtAdmin" Text="{Binding Admin, Mode=TwoWay}" />
+                
+                <TextBlock Text="Camera pass:" />
+                <TextBox x:Name="txtPass" Text="{Binding Pass, Mode=TwoWay}" />
+                
+                <TextBlock Text="Capture Interval:" />
+                <TextBox x:Name="txtInterval" Text="{Binding Interval,Mode=TwoWay}" />
+
+                <TextBlock Text="Delay after upload:" />
+                <TextBox x:Name="txtDelay" Text="{Binding Delay,Mode=TwoWay}" />
+
+                <TextBlock Text="Upload enabled:" />
+                <CheckBox x:Name="checkUpload" IsChecked="{Binding UploadEnabled, Mode=TwoWay}" />
+                <Button Content="Apply" Click="Save_Click" />
+
+                <TextBox x:Name="logHistory" TextWrapping="Wrap" Height="150" />
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
