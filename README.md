@@ -7,7 +7,7 @@ its goal was to create a space that broadened people’s minds and offered them 
 
 ![](images/00-signal-prod.jpg)
 
-You can find the full story on my blog.
+You can find the [full story on my blog](https://codez.deedx.cz/projects/signal-faces/).
 
 This repo hosts the client & server applications.
 
